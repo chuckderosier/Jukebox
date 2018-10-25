@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon server.js"
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
     "express": "~4.16.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "mongoose": "^5.3.6",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.4"
   },
   "description": "Jukebox is an app where users can add their favorite songs for others to discover. There will be a maximum number of 32 songs that can be added. When user selects genre the artists of that genre will populate the grid and a button will appear to add artist.",
   "main": "app.js",
