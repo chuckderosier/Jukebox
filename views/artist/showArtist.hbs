@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Show Artist</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-      <section class="artist">
-    <div class="justList">
-        {{content}}
-    </div>
+<main>
+    <h2>Here are all the artists from the {{artist.artistGenre}} category</h2>
+    <h1>{{artist.artistName}}</h1>
+    <h4>{{artist.artistDescription}}</h4>
+    <h4>Click on album to see songs</h4>
+    {{#each artist.artistAlbum}}
+        <a href="/album/{{id}}">{{albumName}}</a>
+        <h4>{{albumDescription}}</h4>
+        <h4>Year released {{albumYear}}</h4>
     {{/each}}
-</section>
-  </body>
-</html>
+</main>
