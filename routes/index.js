@@ -9,8 +9,10 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' })
 })
 
+router.get('/', artistController.index)
+
 // artist routes
-router.get('/artist/new', artistController.new)
+// router.get('/artist/new', artistController.new)
 // router.get('/artist/:id', artistController.show)
 // router.post('/artist', artistController.create)
 // router.get('/artist/:id', artistController.show)

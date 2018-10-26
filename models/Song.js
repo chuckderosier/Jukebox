@@ -2,10 +2,10 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Song = new Schema({
-    name: String,
-    description: String,
-    lyrics: String,
-    link: String
+    songName: String,
+    songDescription: String,
+    songLyrics: String,
+    songLink: String
 })
 
 module.exports = mongoose.model('Song', Song)

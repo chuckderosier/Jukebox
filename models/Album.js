@@ -1,18 +1,16 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-let songSchema = new Schema({
-    name: String
-})
-
 const Album = new Schema({
-    name: String,
-    description: String,
-    song: [songSchema],
-    year: Number
+    albumName: String,
+    albumDescription: String,
+    albumSong: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Album'
+    }],
+    albumYear: Number
 })
 
-module.exports = {
-    Artist: mongoose.model('Album', Album),
-    Album: mongoose.model('Song', songSchema),
-}
+module.exports = mongoose.model('Album', Album)
+
+
