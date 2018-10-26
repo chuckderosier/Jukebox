@@ -5,7 +5,7 @@ let Artist = new Schema({
     artistName: String,
     artistAlbum: [{
         type: Schema.Types.ObjectId,
-        ref: 'Artist'
+        ref: 'Album'
     }],
     artistDescription: String,
     artistGenre: String
