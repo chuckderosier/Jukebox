@@ -1,18 +1,18 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-let albumSchema = new Schema({
-	name: String
+let songSchema = new Schema({
+    name: String
 })
 
-const Artist = new Schema({
+const Album = new Schema({
     name: String,
     description: String,
-    album: [albumSchema],
-    links: String
+    song: [songSchema],
+    year: Number
 })
 
 module.exports = {
-	Artist: mongoose.model('Artist', Artist),
-	Album: mongoose.model('album', albumSchema),
+    Artist: mongoose.model('Album', Album),
+    Album: mongoose.model('Song', songSchema),
 }
