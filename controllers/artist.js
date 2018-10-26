@@ -4,9 +4,9 @@ const Song = require('../models/Song')
 
 const artistController = {
     index: (req, res) => {
-        const artistId = req.params.artistId
-        Artist.findById(artistId).populate('artist')
+        Artist.find().populate('artist')
             .then(artist => {
+                console.log(artist)
                 res.render('index', {
                     artist: artist
                 })

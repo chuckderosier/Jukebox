@@ -5,9 +5,9 @@ const albumController =require('../controllers/album.js')
 const songController =require('../controllers/song.js')
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' })
-})
+// router.get('/', (req, res, next) => {
+//   res.render('index', { title: 'Express' })
+// })
 
 router.get('/', artistController.index)
 

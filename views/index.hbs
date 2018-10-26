@@ -1,8 +1,9 @@
 <h1>Welcome to Jukebox Database</h1>
 <main>
-    {{#each Artist}}
+    {{#each artist}}
     <div class="artistNames">
-        <a href="/artist/{{_id}}"></a>
+        <a href="/artist/{{artist._id}}">{{artistName}}</a>
+        {{ content }}
     </div>
     {{/each}}
 </main>
