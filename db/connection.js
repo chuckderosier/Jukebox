@@ -1,7 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 
-mongoose
-    .connect('mongodb://localhost/artist')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log('Connected to MongoDB')
     })
@@ -11,5 +11,3 @@ mongoose
     })
 
 module.exports = mongoose
-
-mongoose.connect(process.env.MONGODB_URI)

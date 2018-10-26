@@ -1,53 +1,54 @@
 const Artist = require('../models/Artist.js')
 const Album = require('../models/Album.js')
 const Song = require('../models/Song.js')
-const mongoose = require('./connections')
+const mongoose = require('./connection')
 
-const artist1Album2Song1 = new Song({
-    songName: "Dont stand",
+// CLASSIC ROCK SEED
+const cantStandLosingYou = new Song({
+    songName: "Can't Stand losing You",
+    songDescription: "A bit sad",
+    songLyrics: "Dont stand so close to me Lyrics",
+    songLink: ""
+})
+const nextToYou = new Song({
+    songName: "Next To You",
+    songDescription: "Fun Tune",
+    songLyrics: "NA",
+    songLink: ""
+})
+const outlandosDAmour = new Album({
+    albumName: "Outlandos D'Amour",
+    albumSong: [nextToYou, cantStandLosingYou],
+    albumDescription: "Good Stuff",
+    albumYear: 1978
+})
+
+const canaryInACoalmine = new Song({
+    songName: "Canary In A Coalmine",
     songDescription: "Good Tune",
-    songLyrics: "Dont stand so close to me",
+    songLyrics: "No Lyrics Available",
     songLink: ""
 })
-const artist1Album2Song2 = new Song({
-    songName: "Do DA",
-    songDescription: "Meh Tune",
-    songLyrics: "Da do do do da da da da",
-    songLink: ""
-})
-const artist11Album2 = new Album({
-    albumName: "",
-    albumSong: [artist1Album2Song1, artist1Album2Song2],
-    albumDescription: "",
-    albumYear: 1982
-})
-
-const artist1Album1Song1 = new Song({
-    songName: "",
-    songDescription: "Bad Tune",
-    songLyrics: "None Of Them",
-    songLink: ""
-})
-const artist1Album1Song2 = new Song({
-    songName: "",
+const drivenToTears = new Song({
+    songName: "Driven To Tears",
     songDescription: "Great Tune",
-    songLyrics: "Driven To Tears",
-    songLink: ""
+    songLyrics: "Driven To Tears Lyrics",
+    songLink: "https://www.youtube.com/watch?v=XuoOSGkX7no"
 })
-const artist1Album1 = new Album({
-    albumName: "",
-    albumSong: [artist1Album1Song1, artist1Album1Song2],
-    albumDescription: "",
-    albumYear: 1984
+const zenyattaMondatta = new Album({
+    albumName: "Zenyatta Mondatta",
+    albumSong: [drivenToTears, canaryInACoalmine],
+    albumDescription: "Excellent Album",
+    albumYear: 1980
 })
 
-const artist1 = new Artist({
+const police = new Artist({
     artistName: "Police",
-    artistAlbum: [artist1Album1, artist1Album2],
+    artistAlbum: [zenyattaMondatta, outlandosDAmour],
     artistGenre: "Classic Rock",
     artsistDescription: "Good Band"
 })
-// NEXT ARTIST
+// MODERN ROCK SEED
 const artist2Album2Song1 = new Song({
     songName: "artist2Album2Song1",
     songDescription: "Good Tune",
@@ -89,14 +90,19 @@ const artist2Album1 = new Album({
 const artist2 = new Artist({
     artistName: "artist2",
     artistAlbum: [artist2Album1, artist2Album2],
-    artistGenre: "Classic Rock",
+    artistGenre: "Modern Rock",
     artsistDescription: "Good Band"
 })
 
 Artist.remove({})
-    .then(() => Product.insertMany([laptop, shampoo, bread, couch, television, baseballBat, uno]))
-    .then(() => kroger.save())
-    .then(() => target.save())
-    .then(() => walmart.save())
+    .then(() => drivenToTears.save())
+    .then(() => canaryInACoalmine.save())
+    .then(() => zenyattaMondatta.albumSong.push(drivenToTears, canaryInACoalmine))
+    .then(() => zenyattaMondatta.save())
+    .then(() => nextToYou.save())
+    .then(() => cantStandLosingYou.save())
+    .then(() => outlandosDAmour.albumSong.push(nextToYou, cantStandLosingYou))
+    .then(() => outlandosDAmour.save())
+    .then(() => police.save())
     .then(() => console.log("Database seeded success"))
     .then(() => mongoose.connection.close())
