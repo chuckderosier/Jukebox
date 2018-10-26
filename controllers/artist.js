@@ -4,11 +4,12 @@ const Song = require('../models/Song')
 
 const artistController = {
     index: (req, res) => {
-        const storeId = req.params.storesId
-        Store.findById(storeId).populate('products')
-            .then(store => {
-                const product = store.product
-                res.send('products', {product: product})
+        const artistId = req.params.artistId
+        Artist.findById(artistId).populate('artist')
+            .then(artist => {
+                res.render('index', {
+                    artist: artist
+                })
             })
     }
 }
