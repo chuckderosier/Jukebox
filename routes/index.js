@@ -1,8 +1,8 @@
 var express = require('express')
 var router = express.Router()
-const artistController =require('../controllers/application.js') // back 1 directories and calls the file
-const albumController =require('../controllers/user.js')
-const songController =require('../controllers/chirp.js')
+const artistController =require('../controllers/artist.js') // back 1 directories and calls the file
+const albumController =require('../controllers/album.js')
+const songController =require('../controllers/song.js')
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
