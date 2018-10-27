@@ -8,7 +8,8 @@ let Artist = new Schema({
         ref: 'Album'
     }],
     artistDescription: String,
-    artistGenre: String
+    artistGenre: String,
+    artistLink: String
 })
 
 module.exports = mongoose.model('Artist', Artist)
