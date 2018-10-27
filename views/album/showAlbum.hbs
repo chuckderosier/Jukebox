@@ -1,0 +1,16 @@
+<main>
+    <h2>Here are all the artists from the {{album.albumGenre}} category</h2>
+    <h1>{{album.albumName}}</h1>
+    <h4>{{album.albumDescription}}</h4>
+    <h4>Year released: {{albumYear}}</h4>
+    <h4>Click on album to see songs</h4>
+    {{#each album.albumSong}}
+        <a href="/album/{{id}}">{{albumName}}</a>
+        <h4>{{albumDescription}}</h4>
+    {{/each}}
+    <button href="/editAlbum">Edit album information</button>
+
+    <form action="/album/{{album._id}}?_method=DELETE" method="POST">
+	<button type="submit">Push to delete this album</button>
+	</form>
+</main>

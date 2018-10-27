@@ -17,7 +17,7 @@ router.get('/', albumController.index)
 router.get('/album/:id', albumController.show)
 router.get('/addAlbum', albumController.new)
 router.post('/addAlbum', albumController.create)
-router.get('/album/:id/editAlbum', nameController.edit)
+router.get('/album/:id/editAlbum', albumController.edit)
 router.patch('/album/:id', albumController.update)
 router.delete('/album/:id', albumController.delete)
 
