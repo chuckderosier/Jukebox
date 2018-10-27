@@ -9,7 +9,7 @@ router.get('/', artistController.index)
 router.get('/artist/:id', artistController.show)
 router.get('/addArtist', artistController.new)
 router.post('/addArtist', artistController.create)
-router.get('/artist/:id/editArtist', nameController.edit)
+router.get('/artist/:id/editArtist', artistController.edit)
 router.patch('/artist/:id', artistController.update)
 router.delete('/artist/:id', artistController.delete)
 // album routes

@@ -1,0 +1,17 @@
+<main>
+    
+    <h2>Here are the details of the song {{song.songName}}</h2>
+
+    <a href="/">Return to Home Page</a>
+
+    <h4>{{song.songDescription}}</h4>
+    <h4>Song Lyrics: {{song.songLyrics}}</h4>
+    <h4>Links to hear song: {{song.songLink}}</h4>
+
+    <button href="/editSong">Edit song information</button>
+
+    <form action="/song/{{song._id}}?_method=DELETE" method="POST">
+	<button type="submit">Push to delete this song</button>
+	</form>
+
+</main>
