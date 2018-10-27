@@ -4,13 +4,9 @@ const artistController =require('../controllers/artist.js') // back 1 directorie
 const albumController =require('../controllers/album.js')
 const songController =require('../controllers/song.js')
 
-
-
-
-
 // artist routes
 router.get('/', artistController.index)
-// router.get('/artist/addArtist', artistController.new)
+router.get('/addArtist', artistController.new)
 router.get('/artist/:id', artistController.show)
 // router.post('/artist', artistController.create)
 // router.get('/artist/:id', artistController.show)

@@ -12,9 +12,9 @@ const artistController = {
                 })
             })
     },
-    // new: (req, res) => {
-    //     res.send('/artist/addArtist')
-    // },
+    new: (req, res) => {
+        res.render('artist/addArtist')
+    },
     show: (req, res) => {
         console.log(req.params.id)
         Artist.findById(req.params.id).populate('artistAlbum').then((artistFromDb) => {
