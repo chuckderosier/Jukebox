@@ -6,13 +6,12 @@ const songController =require('../controllers/song.js')
 
 // artist routes
 router.get('/', artistController.index)
-router.get('/addArtist', artistController.new)
 router.get('/artist/:id', artistController.show)
-// router.post('/artist', artistController.create)
-// router.get('/artist/:id', artistController.show)
-// router.get('/recipe/:id/edit', nameController.edit)
-// router.patch('/artist/:id', artistController.update)
-// router.delete('/artist/:id', artistController.delete)
+router.get('/addArtist', artistController.new)
+router.post('/addArtist', artistController.create)
+router.get('/artist/:id/editArtist', nameController.edit)
+router.patch('/artist/:id', artistController.update)
+router.delete('/artist/:id', artistController.delete)
 
 
 module.exports = router
