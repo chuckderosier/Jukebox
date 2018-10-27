@@ -1,0 +1,29 @@
+<main>
+
+	<h2>Edit the artist</h2>
+
+	<a href="/">Return to Home Page</a>
+
+	<div>
+
+		<form action="/{{artist._id}}"?_method=PATCH method="POST">
+			<p class="input-field">Edit artist name:
+				<input type="text" name="name" value="{{artist.artistName}}"> 
+			</p>
+			<p class="input-field">Add a new album: 
+				<input type="text" name="artistAlbum" value="{{artist.artistAlbum}}">
+			</p>
+			<p class="input-field">Edit artist description: 
+				<input type="text" name="artistDescription" value="{{artist.artistDescription}}">
+			</p>
+			<p class="input-field">Edit the genre: 
+				<input type="text" name="artistGenre" value="{{artist.artistGenre}}">
+			</p>
+			<p class="input-field">Edit how many in stock:
+				<input type="text" name="artistLink" value="{{artist.artistLink}}">
+			</p>
+			<button type="submit">Save your edits</button>
+		</form>
+
+	</div>
+</main>

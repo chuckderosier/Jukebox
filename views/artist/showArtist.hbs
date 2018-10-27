@@ -9,4 +9,9 @@
         <h4>Year released {{albumYear}}</h4>
         <a href={{artistLink}}>Band's Website or Info</a>
     {{/each}}
+    <button href="/editArtist">Edit artist information</button>
+
+    <form action="/artist/{{artist._id}}?_method=DELETE" method="POST">
+	<button type="submit">Push to delete this recipe</button>
+	</form>
 </main>
