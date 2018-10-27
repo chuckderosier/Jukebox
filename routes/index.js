@@ -20,5 +20,13 @@ router.post('/addAlbum', albumController.create)
 router.get('/album/:id/editAlbum', albumController.edit)
 router.patch('/album/:id', albumController.update)
 router.delete('/album/:id', albumController.delete)
+// song routes
+router.get('/', songController.index)
+router.get('/song/:id', songController.show)
+router.get('/addSong', songController.new)
+router.post('/addSong', songController.create)
+router.get('/song/:id/editSong', songController.edit)
+router.patch('/song/:id', songController.update)
+router.delete('/song/:id', songController.delete)
 
 module.exports = router
