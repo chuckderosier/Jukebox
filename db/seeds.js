@@ -63,7 +63,7 @@ const drivenToTears = new Song({
 const zenyattaMondatta = new Album({
     albumName: "Zenyatta Mondatta",
     albumSong: [drivenToTears, canaryInACoalmine],
-    albumDescription: "",
+    albumDescription: "Great Album",
     albumYear: 1980
 })
 const police = new Artist({
@@ -120,9 +120,11 @@ const heartlessBastards = new Artist({
     artistLink: "https://www.theheartlessbastards.com/index.html"
 })
 
-Artist.remove({})
+Artist.deleteMany({})
+Album.deleteMany({})
+Song.deleteMany({})
 // OLDIES
-    .then(() => rollOverBeethoven.save()
+    .then(() => rollOverBeethoven.save())
     .then(() => johnnyBGoode.save())
     .then(() => johnnyBGoode45.albumSong.push(rollOverBeethoven, johnnyBGoode))
     .then(() => johnnyBGoode45.save())
@@ -140,7 +142,7 @@ Artist.remove({})
     .then(() => police.artistAlbum.push(outlandosDAmour, zenyattaMondatta))
     .then(() => police.save())
 // MODERN
-    .then(() => raysOnPionions.save()
+    .then(() => raysOnPionions.save())
     .then(() => cogwheel.save())
     .then(() => redAlbum.albumSong.push(raysOnPionions, cogwheel))
     .then(() => redAlbum.save())
