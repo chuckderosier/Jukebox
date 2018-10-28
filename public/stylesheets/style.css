@@ -1,12 +1,31 @@
 body {
   padding: 10px;
+  margin: 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgba(100,100,100,1);
+  width:980px;
+  min-height: 600px;
   background-image: url("/images/juke.png");
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-rows: 3fr, 1fr;
+  grid-template-areas:
+  "main"
+  "nav";
 }
+
+main {
+  text-align: center;
+  color: white;
+}
+
+.siteTitle {
+  text-align: left;
+}
+
+footer {}
 
 a {
   color: #00B7FF;
