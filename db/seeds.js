@@ -25,7 +25,7 @@ const johnnyBGoode45 = new Album({
 const chuckBerry = new Artist({
     artistName: "Chuck Berry",
     artistAlbum: [johnnyBGoode45],
-    artsistDescription: "50's artist",
+    artsistDescription: "50s artist",
     artistGenre: "Oldies",
     artistLink: "https://jerryleelewis.com/"
 })
@@ -71,7 +71,7 @@ const police = new Artist({
     artistAlbum: [zenyattaMondatta, outlandosDAmour],
     artsistDescription: "80's Band",
     artistGenre: "Classic Rock",
-    artistLink: ""
+    artistLink: "https://www.thepolice.com/"
 })
 // MODERN ROCK SEED
 const cogwheel = new Song({

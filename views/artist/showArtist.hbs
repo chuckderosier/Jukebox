@@ -1,13 +1,12 @@
 <main>
 
-    <h2>Here are all the albums from {{artist.artistName}}</h2>
+    <h1>{{artist.artistName}}</h1>
+    <h4>{{artist.artistDescription}}</h4>
 
     <a href="/">Return to Home Page</a>
 
-    <h1>{{artist.artistName}}</h1>
-    <h4>{{artist.artistDescription}}</h4>
     <h4>Click on album to see songs</h4>
-    {{#each artist.artistAlbum}}
+    {{#each artistAlbum}}
         <a href="/album/{{id}}">{{albumName}}</a>
         <h4>{{albumDescription}}</h4>
         <h4>Artist Genre: {{artistGenre}}</h4>
