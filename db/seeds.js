@@ -25,7 +25,7 @@ const johnnyBGoode45 = new Album({
 const chuckBerry = new Artist({
     artistName: "Chuck Berry",
     artistAlbum: [johnnyBGoode45],
-    artsistDescription: "50s artist",
+    artistDescription: "50s artist",
     artistGenre: "Oldies",
     artistLink: "https://jerryleelewis.com/"
 })
@@ -69,7 +69,7 @@ const zenyattaMondatta = new Album({
 const police = new Artist({
     artistName: "The Police",
     artistAlbum: [zenyattaMondatta, outlandosDAmour],
-    artsistDescription: "80's Band",
+    artistDescription: "80's Band",
     artistGenre: "Classic Rock",
     artistLink: "https://www.thepolice.com/"
 })
@@ -96,7 +96,7 @@ const baroness = new Artist({
     artistName: "Baroness",
     artistAlbum: [redAlbum],
     artistGenre: "Modern Rock",
-    artsistDescription: "Baroness is an American heavy metal band from Savannah, Georgia whose original members grew up together in Lexington, Virginia.",
+    artistDescription: "Baroness is an American heavy metal band from Savannah, Georgia whose original members grew up together in Lexington, Virginia.",
     artistLink: "http://yourbaroness.com/"
 })
 // SECOND MODERN ROCK
@@ -116,7 +116,7 @@ const heartlessBastards = new Artist({
     artistName: "Heartless Bastards",
     artistAlbum: [allThisTime],
     artistGenre: "Modern Rock",
-    artsistDescription: "Heartless Bastards are an American garage rock band formed in Cincinnati, Ohio in 2003.",
+    artistDescription: "Heartless Bastards are an American garage rock band formed in Cincinnati, Ohio in 2003.",
     artistLink: "https://www.theheartlessbastards.com/index.html"
 })
 
@@ -126,33 +126,24 @@ Artist.deleteMany({})
 // OLDIES
     .then(() => rollOverBeethoven.save())
     .then(() => johnnyBGoode.save())
-    .then(() => johnnyBGoode45.albumSong.push(rollOverBeethoven, johnnyBGoode))
     .then(() => johnnyBGoode45.save())
-    .then(() => chuckBerry.artistAlbum.push(johnnyBGoode45))
     .then(() => chuckBerry.save())
 // CLASSIC
     .then(() => drivenToTears.save())
     .then(() => canaryInACoalmine.save())
-    .then(() => zenyattaMondatta.albumSong.push(drivenToTears, canaryInACoalmine))
     .then(() => zenyattaMondatta.save())
     .then(() => nextToYou.save())
     .then(() => cantStandLosingYou.save())
-    .then(() => outlandosDAmour.albumSong.push(nextToYou, cantStandLosingYou))
     .then(() => outlandosDAmour.save())
-    .then(() => police.artistAlbum.push(outlandosDAmour, zenyattaMondatta))
     .then(() => police.save())
 // MODERN
     .then(() => raysOnPionions.save())
     .then(() => cogwheel.save())
-    .then(() => redAlbum.albumSong.push(raysOnPionions, cogwheel))
     .then(() => redAlbum.save())
-    .then(() => baroness.artistAlbum.push(redAlbum))
     .then(() => baroness.save())
 // MODERN TWO
     .then(() => valleyOfDebris.save())
-    .then(() => allThisTime.albumSong.push(valleyOfDebris))
     .then(() => allThisTime.save())
-    .then(() => heartlessBastards.artistAlbum.push(allThisTime))
     .then(() => heartlessBastards.save())
 
     .then(() => console.log("Database seeded success"))
