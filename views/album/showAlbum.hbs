@@ -6,8 +6,6 @@
 
         <h2>{{album.albumName}}</h2>
 
-        <a href="/">Return to Home Page</a>
-
         <h4>{{album.albumName}}</h4>
         <h4>{{album.albumDescription}}</h4>
         <h4>Year released: {{album.albumYear}}</h4>
@@ -24,6 +22,8 @@
         <form action="/album/{{album._id}}?_method=DELETE" method="POST">
             <button type="submit">Push to delete this album</button>
         </form>
+
+        <a href="/">Return to Home Page</a>
 
     </div>
 </main>

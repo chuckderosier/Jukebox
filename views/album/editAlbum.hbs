@@ -4,10 +4,6 @@
 
 	<div class="screen">
 
-		<a href="/">Return to Home Page</a>
-
-		<div>
-
 			<form action="/{{album._id}}" ?_method=PATCH method="POST">
 				<p class="input-field">Edit album name:
 					<input type="text" name="albumName" value="{{album.albumName}}">
@@ -24,6 +20,7 @@
 				<button type="submit">Save your edits</button>
 			</form>
 
-		</div>
+			<a href="/">Return to Home Page</a>
+
 	</div>
 </main>

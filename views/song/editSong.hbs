@@ -4,26 +4,23 @@
 
 	<div class="screen">
 
+		<form action="/{{song._id}}" ?_method=PATCH method="POST">
+			<p class="input-field">Edit song name:
+				<input type="text" name="songName" value="{{song.songName}}">
+			</p>
+			<p class="input-field">Edit or add song description:
+				<input type="text" name="songDescription" value="{{song.songDescription}}">
+			</p>
+			<p class="input-field">Edit or add the lyrics:
+				<input type="text" name="songLyrics" value="{{song.songLyrics}}">
+			</p>
+			<p class="input-field">Edit or add link to hear song:
+				<input type="text" name="songLink" value="{{song.songLink}}">
+			</p>
+			<button type="submit">Save your edits</button>
+		</form>
+
 		<a href="/">Return to Home Page</a>
 
-		<div>
-
-			<form action="/{{song._id}}" ?_method=PATCH method="POST">
-				<p class="input-field">Edit song name:
-					<input type="text" name="songName" value="{{song.songName}}">
-				</p>
-				<p class="input-field">Edit or add song description:
-					<input type="text" name="songDescription" value="{{song.songDescription}}">
-				</p>
-				<p class="input-field">Edit or add the lyrics:
-					<input type="text" name="songLyrics" value="{{song.songLyrics}}">
-				</p>
-				<p class="input-field">Edit or add link to hear song:
-					<input type="text" name="songLink" value="{{song.songLink}}">
-				</p>
-				<button type="submit">Save your edits</button>
-			</form>
-
-		</div>
 	</div>
 </main>

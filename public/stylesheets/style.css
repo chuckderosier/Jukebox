@@ -73,7 +73,7 @@ a {
 
 /* ADD ARTIST */
 .artist-container-show {
-  display: inline-block;
+  width: 75%;
   margin: 0 auto;
 }
 .input-field {
