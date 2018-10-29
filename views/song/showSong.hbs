@@ -1,6 +1,10 @@
 <main>
-    
-    <h2>Here are the details of the song {{song.songName}}</h2>
+
+    <h1>Details<br>of the<br>song</h1>
+
+    <div class="screen"></div>
+
+    <h2>{{song.songName}}</h2>
 
     <a href="/">Return to Home Page</a>
 
@@ -11,7 +15,9 @@
     <button href="/editSong">Edit song information</button>
 
     <form action="/song/{{song._id}}?_method=DELETE" method="POST">
-	<button type="submit">Push to delete this song</button>
-	</form>
+        <button type="submit">Push to delete this song</button>
+    </form>
+
+    </div>
 
 </main>

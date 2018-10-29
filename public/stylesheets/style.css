@@ -17,35 +17,38 @@ body {
 }
 
 main {
+  grid-area: main;
   text-align: center;
   color: white;
-  grid-area: main;
 }
 
-.siteTitle {
+h1 {
   margin: -2px 0 38px 2px;
   text-align: left;
 }
 
 .screen {
-  background-color: white;
+  background-color: rgba(255,255,255,.2);
   margin: 0 auto;
   padding: 5px;
   width: 62%;
   height: 69%;
-  border-top-left-radius: 200%;
-  border-top-right-radius: 200%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
 }
 
 footer {
+  margin: 0 auto;
+  align-items: center;
   color: white;
-  display: inline-block;
+  display: inline;
   grid-area: footer;
 }
 
 nav {
+  margin: 0 auto;
   float: left;
 }
 
@@ -59,11 +62,23 @@ h4 {
 }
 
 p {
-  /* display: inline-block; */
+  /* display: inline; */
   width: 20%;
   float: right;
 }
 
 a {
   color: yellow;
+}
+
+/* ADD ARTIST */
+.artist-container-show {
+  display: inline-block;
+  margin: 0 auto;
+}
+.input-field {
+  display: inline-block;
+}
+input {
+  display: inline-block;
 }

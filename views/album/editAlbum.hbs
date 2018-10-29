@@ -1,26 +1,29 @@
 <main>
 
-	<h2>Edit the album</h2>
+	<h1>Edit<br>the<br>album</h1>
 
-	<a href="/">Return to Home Page</a>
+	<div class="screen">
 
-	<div>
+		<a href="/">Return to Home Page</a>
 
-		<form action="/{{album._id}}"?_method=PATCH method="POST">
-			<p class="input-field">Edit album name:
-				<input type="text" name="albumName" value="{{album.albumName}}"> 
-			</p>
-			<p class="input-field">Add a new song: 
-				<input type="text" name="albumSong" value="{{album.albumSong}}">
-			</p>
-			<p class="input-field">Edit album description: 
-				<input type="text" name="albumDescription" value="{{album.albumDescription}}">
-			</p>
-			<p class="input-field">Edit the release year: 
-				<input type="number" name="albumYear" value="{{album.albumYear}}">
-			</p>
-			<button type="submit">Save your edits</button>
-		</form>
+		<div>
 
+			<form action="/{{album._id}}" ?_method=PATCH method="POST">
+				<p class="input-field">Edit album name:
+					<input type="text" name="albumName" value="{{album.albumName}}">
+				</p>
+				<p class="input-field">Add a new song:
+					<input type="text" name="albumSong" value="{{album.albumSong}}">
+				</p>
+				<p class="input-field">Edit album description:
+					<input type="text" name="albumDescription" value="{{album.albumDescription}}">
+				</p>
+				<p class="input-field">Edit the release year:
+					<input type="number" name="albumYear" value="{{album.albumYear}}">
+				</p>
+				<button type="submit">Save your edits</button>
+			</form>
+
+		</div>
 	</div>
 </main>
