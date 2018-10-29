@@ -121,8 +121,8 @@ const heartlessBastards = new Artist({
 })
 
 Artist.deleteMany({})
-Album.deleteMany({})
-Song.deleteMany({})
+    .then(() => Album.deleteMany())
+    .then(() => Song.deleteMany())
 // OLDIES
     .then(() => rollOverBeethoven.save())
     .then(() => johnnyBGoode.save())

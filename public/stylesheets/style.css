@@ -3,22 +3,23 @@ body {
   margin: 5px auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgba(100,100,100,1);
-  width:980px;
-  min-height: 600px;
+  min-width: 980px;
+  max-height: 600px;
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-rows: 6fr, 1fr;
+  grid-template-rows: 3fr 1fr;
   grid-template-areas:
   "main"
-  "nav";
+  "footer";
 }
 
 main {
   text-align: center;
   color: white;
+  grid-area: main;
 }
 
 .siteTitle {
@@ -29,8 +30,9 @@ main {
 .screen {
   background-color: white;
   margin: 0 auto;
-  width: 64%;
-  height: 97%;
+  padding: 5px;
+  width: 62%;
+  height: 69%;
   border-top-left-radius: 200%;
   border-top-right-radius: 200%;
   border-bottom-left-radius: 15%;
@@ -40,10 +42,10 @@ main {
 footer {
   color: white;
   display: inline-block;
+  grid-area: footer;
 }
 
 nav {
-  /* display: inline-block; */
   float: left;
 }
 
@@ -63,5 +65,5 @@ p {
 }
 
 a {
-  color: #00B7FF;
+  color: yellow;
 }
