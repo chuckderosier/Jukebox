@@ -11,18 +11,16 @@ const artistController = {
             })
     },
     new: (req, res) => {
-        res.render('artist/addArtist')
+        res.render('artist/add')
     },
     show: (req, res) => {
-        console.log(req.params.id)
         Artist.findById(req.params.id).populate('artistAlbum').then((artistFromDb) => {
             res.render(
-                'artist/showArtist',
+                'artist/show',
                 { artist: artistFromDb }
             )
         })
     },
-    // needs push to array??????
     create: (req, res) => {
         Artist.create(req.body).then((savedArtist) => {
             res.send(savedArtist)
@@ -31,7 +29,7 @@ const artistController = {
     },
     edit: (req, res) => {
         Artist.findById(req.params.id).then(artist => {
-            res.render('artist/editArtist', {
+            res.render('artist/edit', {
                 artist: artist
             })
         })

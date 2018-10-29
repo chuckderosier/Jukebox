@@ -4,25 +4,22 @@ const albumController = {
     index: (req, res) => {
         Album.find().populate('album')
             .then(album => {
-                console.log(album)
-                res.render('/', {
+                res.render('album/show', {
                     album: album
                 })
             })
     },
     new: (req, res) => {
-        res.render('album/addAlbum')
+        res.render('album/add')
     },
     show: (req, res) => {
-        console.log(req.params.id)
-        Album.findById(req.params.id).populate('artistAlbum').then((albumFromDb) => {
+        Album.findById(req.params.id).populate('albumSong').then((album) => {
             res.render(
-                'album/showAlbum',
-                { album: albumFromDb }
+                'album/show',
+                { album: album }
             )
         })
     },
-    // needs push to array??????
     create: (req, res) => {
         Album.create(req.body).then((savedAlbum) => {
             res.send(savedAlbum)
@@ -31,7 +28,7 @@ const albumController = {
     },
     edit: (req, res) => {
         Album.findById(req.params.id).then(album => {
-            res.render('artist/showAlbum', {
+            res.render('album/show', {
                 album: album
             })
         })
@@ -39,7 +36,7 @@ const albumController = {
     update: (req, res) => {
         Album.findByIdAndUpdate(req.params.id, req.body).then((updatedAlbum) => {
             updatedAlbum.save()
-            res.redirect(`/artist/${updatedAlbum._id}`)
+            res.redirect(`/album/${updatedAlbum._id}`)
         })
     },
     delete: (req, res) => {
