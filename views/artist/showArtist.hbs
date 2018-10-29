@@ -17,7 +17,9 @@
         <a href={{artistLink}}>Band's Website or Info</a>
         {{/each}}
 
-        <button href="/editArtist">Edit artist information</button>
+        <a href="/addAlbum"><button>Add an album</button></a>ß
+
+        <a href="/editArtist"><button>Edit artist information</button></a>ß
 
         <form action="/artist/{{artist._id}}?_method=DELETE" method="POST">
             <button type="submit">Push to delete this artist</button>
