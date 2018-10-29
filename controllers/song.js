@@ -1,5 +1,3 @@
-const Artist = require('../models/Artist')
-const Album = require('../models/Album')
 const Song = require('../models/Song')
 
 const songController = {
@@ -29,7 +27,7 @@ const songController = {
         Song.create(req.body).then((savedSong) => {
             res.send(savedSong)
         })
-        res.redirect('index')
+        res.redirect('?')
     },
     edit: (req, res) => {
         Song.findById(req.params.id).then(song => {
@@ -46,7 +44,7 @@ const songController = {
     },
     delete: (req, res) => {
         Song.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('index')
+            res.redirect('/')
         })
     }
 }

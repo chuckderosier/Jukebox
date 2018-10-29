@@ -66,8 +66,8 @@ h1 {
 /* control panet */
 footer {
   grid-row: span 2;
+  display: flex;
   margin: 0 auto;
-  align-items: center;
   color: white;
   display: inline;
   grid-area: footer;
@@ -78,17 +78,12 @@ nav {
   float: left;
 }
 
-h4 {
-  margin: -1px 0;
-}
-
 .genres {
   display: inline-block;
   margin: -10px 0;
 }
 
 p {
-  /* display: inline; */
   width: 20%;
   float: right;
 }

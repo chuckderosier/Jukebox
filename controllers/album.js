@@ -1,13 +1,11 @@
-const Artist = require('../models/Artist')
 const Album = require('../models/Album')
-const Song = require('../models/Song')
 
 const albumController = {
     index: (req, res) => {
         Album.find().populate('album')
             .then(album => {
                 console.log(album)
-                res.render('index', {
+                res.render('/', {
                     album: album
                 })
             })
@@ -29,7 +27,7 @@ const albumController = {
         Album.create(req.body).then((savedAlbum) => {
             res.send(savedAlbum)
         })
-        res.redirect('index')
+        res.redirect('/')
     },
     edit: (req, res) => {
         Album.findById(req.params.id).then(album => {
@@ -46,7 +44,7 @@ const albumController = {
     },
     delete: (req, res) => {
         Album.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('index')
+            res.redirect('/')
         })
     }
 }
