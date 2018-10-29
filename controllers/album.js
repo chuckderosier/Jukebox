@@ -28,7 +28,8 @@ const albumController = {
     },
     edit: (req, res) => {
         Album.findById(req.params.id).then(album => {
-            res.render('album/show', {
+            console.log("ALBUM",album)
+            res.render('album/edit', {
                 album: album
             })
         })

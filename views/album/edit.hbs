@@ -4,7 +4,7 @@
 
 	<div class="screen">
 
-			<form action="/{{album._id}}" ?_method=PATCH method="POST">
+			<form action="/album/{{album._id}}?_method=PATCH" method="POST">
 				<p class="input-field">Edit album name:
 					<input type="text" name="albumName" value="{{album.albumName}}">
 				</p>

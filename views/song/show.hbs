@@ -10,7 +10,7 @@
         <h4>Song Lyrics: {{song.songLyrics}}</h4>
         <h4>Links to hear song: {{song.songLink}}</h4>
 
-        <a href="/artist/{{song.id}}/edit"><button>Edit song information</button></a>
+        <a href="/song/{{song.id}}/edit"><button>Edit song information</button></a>
 
         <form action="/song/{{song._id}}?_method=DELETE" method="POST">
             <button type="submit">Push to delete this song</button>
