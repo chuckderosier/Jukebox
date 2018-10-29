@@ -1,6 +1,6 @@
 body {
   padding: 10px;
-  margin: 0 auto;
+  margin: 5px auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgba(100,100,100,1);
   width:980px;
@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-rows: 3fr, 1fr;
+  grid-template-rows: 6fr, 1fr;
   grid-template-areas:
   "main"
   "nav";
@@ -22,10 +22,45 @@ main {
 }
 
 .siteTitle {
+  margin: -2px 0 38px 2px;
   text-align: left;
 }
 
-footer {}
+.screen {
+  background-color: white;
+  margin: 0 auto;
+  width: 64%;
+  height: 97%;
+  border-top-left-radius: 200%;
+  border-top-right-radius: 200%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+footer {
+  color: white;
+  display: inline-block;
+}
+
+nav {
+  /* display: inline-block; */
+  float: left;
+}
+
+h4 {
+  margin: -1px 0;
+}
+
+.genres {
+  display: inline-block;
+  margin: -10px 0;
+}
+
+p {
+  /* display: inline-block; */
+  width: 20%;
+  float: right;
+}
 
 a {
   color: #00B7FF;

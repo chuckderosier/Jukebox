@@ -1,9 +1,11 @@
 <main>
     <h1 class="siteTitle">Welcome to<br>Jukebox<br>Database</h1>
-    {{#each artist}}
-    <div class="artistNames">
-        <a href="/artist/{{_id}}">{{artistName}}</a>
-        {{ content }}
+    <div class="screen">
+        {{#each artist}}
+        <div class="artistNames">
+            <a href="/artist/{{_id}}">{{artistName}}</a>
+            {{ content }}
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </main>
