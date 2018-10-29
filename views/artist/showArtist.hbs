@@ -5,21 +5,23 @@
 
     <div class="screen">
 
+        <h3>{{artist.artistName}}</h3>
+
         <h4>{{artist.artistDescription}}</h4>
 
         <a href="/">Return to Home Page</a>
 
         <h4>Click on album to see songs</h4>
-        {{#each artistAlbum}}
+        {{#each artist.artistAlbum}}
         <a href="/album/{{id}}">{{albumName}}</a>
         <h4>{{albumDescription}}</h4>
         <h4>Artist Genre: {{artistGenre}}</h4>
         <a href={{artistLink}}>Band's Website or Info</a>
         {{/each}}
 
-        <a href="/addAlbum"><button>Add an album</button></a>ß
+        <a href="/addAlbum"><button>Add an album</button></a>
 
-        <a href="/editArtist"><button>Edit artist information</button></a>ß
+        <a href="/artist/{{artist.id}}/editArtist"><button>Edit artist information</button></a>
 
         <form action="/artist/{{artist._id}}?_method=DELETE" method="POST">
             <button type="submit">Push to delete this artist</button>

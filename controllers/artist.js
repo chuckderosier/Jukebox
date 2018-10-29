@@ -33,14 +33,15 @@ const artistController = {
     },
     edit: (req, res) => {
         Artist.findById(req.params.id).then(artist => {
-            res.render('showArtist', {
+            res.render('artist/editArtist', {
                 artist: artist
             })
         })
     },
     update: (req, res) => {
         Artist.findByIdAndUpdate(req.params.id, req.body).then((updatedArtist) => {
-            res.redirect(`/${updatedArtist}`)
+            updatedArtist.save()
+            res.redirect(`/artist/${updatedArtist._id}`)
         })
     },
     delete: (req, res) => {

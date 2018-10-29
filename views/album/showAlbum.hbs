@@ -19,7 +19,7 @@
 
         <a href="/addSong"><button>Add a song to the album</button></a>
 
-        <a href="/editAlbum"><button>Edit album information</button></a>
+        <a href="/artist/{{album.id}}/editAlbum"><button>Edit album information</button></a>
 
         <form action="/album/{{album._id}}?_method=DELETE" method="POST">
             <button type="submit">Push to delete this album</button>

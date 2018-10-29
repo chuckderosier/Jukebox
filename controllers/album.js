@@ -33,14 +33,15 @@ const albumController = {
     },
     edit: (req, res) => {
         Album.findById(req.params.id).then(album => {
-            res.render('showAlbum', {
+            res.render('artist/showAlbum', {
                 album: album
             })
         })
     },
     update: (req, res) => {
         Album.findByIdAndUpdate(req.params.id, req.body).then((updatedAlbum) => {
-            res.redirect(`/${updatedAlbum}`)
+            updatedAlbum.save()
+            res.redirect(`/artist/${updatedAlbum._id}`)
         })
     },
     delete: (req, res) => {

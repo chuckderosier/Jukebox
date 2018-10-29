@@ -6,9 +6,9 @@
 
 		<a href="/">Return to Home Page</a>
 
-		<form action="/{{artist._id}}" ?_method=PATCH method="POST">
+		<form action="/artist/{{artist._id}}?_method=PATCH" method="POST">
 			<p class="input-field">Edit artist name:
-				<input type="text" name="albumName" value="{{artist.artistName}}">
+				<input type="text" name="artistName" value="{{artist.artistName}}">
 			</p>
 			<p class="input-field">Add a new album:
 				<input type="text" name="artistAlbum" value="{{artist.artistAlbum}}">

@@ -33,14 +33,15 @@ const songController = {
     },
     edit: (req, res) => {
         Song.findById(req.params.id).then(song => {
-            res.render('showSong', {
+            res.render('artist/showSong', {
                 song: song
             })
         })
     },
     update: (req, res) => {
         Song.findByIdAndUpdate(req.params.id, req.body).then((updatedSong) => {
-            res.redirect(`/${updatedSong}`)
+            updateSong.save()
+            res.redirect(`/artist/${updatedSong._id}`)
         })
     },
     delete: (req, res) => {
