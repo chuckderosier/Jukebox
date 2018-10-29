@@ -23,11 +23,12 @@ main {
 }
 
 h1 {
-  margin: -2px 0 38px 2px;
+  margin: -3px 0 38px 2px;
   text-align: left;
 }
 
 .screen {
+  grid-row: span 2;
   background-color: rgba(255,255,255,.2);
   margin: 0 auto;
   padding: 10px;
@@ -38,8 +39,33 @@ h1 {
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
 }
+/* ADD ARTIST */
+.artistName {
+  color: rgba(255,0,240,1);
+  margin: 0 auto 20px auto;
+}
+.artistDescription {
+  margin: -15px auto 10px auto;
+  width: 50%;
+  font-size: 12px;
+}
+.albumDescription {
+  margin: 0 auto 10px auto;
+  width: 80%;
+  font-size: 12px;
+}
+.artistLink {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+.artistDelete {
+  display: inline-block;
+  margin: 5px auto 5px auto;
+}
 
+/* control panet */
 footer {
+  grid-row: span 2;
   margin: 0 auto;
   align-items: center;
   color: white;
@@ -69,16 +95,4 @@ p {
 
 a {
   color: yellow;
-}
-
-/* ADD ARTIST */
-.artist-container-show {
-  width: 75%;
-  margin: 0 auto;
-}
-.input-field {
-  display: inline-block;
-}
-input {
-  display: inline-block;
 }

@@ -1,34 +1,35 @@
 <main>
-    <h1>Artist:</h1>
-
-    <h1>{{artist.artistName}}</h1>
+    <h1>Artist<br>you are<br>viewing:</h1>
 
     <div class="screen">
 
         <div class="artist-container-show"></div>
 
-        <h3>{{artist.artistName}}</h3>
+        <h2 class="artistName">{{artist.artistName}}</h2>
 
-        <h4>{{artist.artistDescription}}</h4>
+        <h4 class="artistDescription">{{artist.artistDescription}}</h4>
 
-        <h4>Click on album to see songs</h4>
+        <h4>Click on album to see songs:</h4>
         {{#each artist.artistAlbum}}
         <a href="/album/{{id}}">{{albumName}}</a>
-        <h4>{{albumDescription}}</h4>
-        <h4>Artist Genre: {{artistGenre}}</h4>
-        <a href={{artistLink}}>Band's Website or Info</a>
+        <h4 class="albumDescription">{{albumDescription}}</h4>
         {{/each}}
 
-        <a href="/addAlbum"><button>Add an album</button></a>
+        <h4>Artist Genre: {{artist.artistGenre}}</h4>
+        <a href={{artist.artistLink}} class="artistLink">Band's Website or Info</a>
 
-        <a href="/artist/{{artist.id}}/editArtist"><button>Edit artist information</button></a>
+        <div class="artistButtons">
+            <a href="/addAlbum"><button>Add an album</button></a>
 
-        <form action="/artist/{{artist._id}}?_method=DELETE" method="POST">
-            <button type="submit">Push to delete this artist</button>
-        </form>
+            <a href="/artist/{{artist.id}}/editArtist"><button>Edit artist info.</button></a>
+
+            <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="artistDelete">
+                <button type="submit">Delete this artist</button>
+            </form>
         </div>
 
         <a href="/">Return to Home Page</a>
-        
+
     </div>
+
 </main>
