@@ -4,15 +4,15 @@
 
     <div class="screen">
 
-        <h2>{{song.songName}}</h2>
+        <h2 class="name">{{song.songName}}</h2>
 
-        <h4>{{song.songDescription}}</h4>
-        <h4>Song Lyrics: {{song.songLyrics}}</h4>
-        <h4>Links to hear song: {{song.songLink}}</h4>
+        <h4 class="description1">{{song.songDescription}}</h4>
+        <h4 class="h4">Song Lyrics: {{song.songLyrics}}</h4>
+        <h4 class="link">Links to hear song: {{song.songLink}}</h4>
 
         <a href="/song/{{song.id}}/edit"><button>Edit song information</button></a>
 
-        <form action="/song/{{song._id}}?_method=DELETE" method="POST">
+        <form action="/song/{{song._id}}?_method=DELETE" method="POST" class="delete">
             <button type="submit">Push to delete this song</button>
         </form>
 

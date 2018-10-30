@@ -4,23 +4,23 @@
 
     <div class="screen">
 
-        <h2>{{album.albumName}}</h2>
+        <h2 class="name">{{album.albumName}}</h2>
 
-        <h4>{{album.albumDescription}}</h4>
+        <h4 class="description1">{{album.albumDescription}}</h4>
 
-        <h4>Year released: {{album.albumYear}}</h4>
+        <h4 class="h4">Year released: {{album.albumYear}}</h4>
         
-        <h4>Click on song to see more info: </h4>
+        <h4 class="h4">Click on song to see more info: </h4>
         {{#each album.albumSong}}
         <a href="/song/{{id}}">{{songName}}</a>
-        <h4>{{songDescription}}</h4>
+        <h4 class="description2">{{songDescription}}</h4>
         {{/each}}
 
         <a href="/song/new"><button>Add a song to the album</button></a>
 
         <a href="/album/{{album.id}}/edit"><button>Edit album information</button></a>
 
-        <form action="/album/{{album._id}}?_method=DELETE" method="POST">
+        <form action="/album/{{album._id}}?_method=DELETE" method="POST" class="delete">
             <button type="submit">Push to delete this album</button>
         </form>
 

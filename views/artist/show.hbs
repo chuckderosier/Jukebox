@@ -3,27 +3,25 @@
 
     <div class="screen">
 
-        <div class="artist-container-show"></div>
+        <h2 class="name">{{artist.artistName}}</h2>
 
-        <h2 class="artistName">{{artist.artistName}}</h2>
+        <h4 class="description1">{{artist.artistDescription}}</h4>
 
-        <h4 class="artistDescription">{{artist.artistDescription}}</h4>
-
-        <h4>Click on album to see songs:</h4>
+        <h4 class="h4">Click on album to see songs:</h4>
         {{#each artist.artistAlbum}}
         <a href="/album/{{id}}">{{albumName}}</a>
-        <h4 class="albumDescription">{{albumDescription}}</h4>
+        <h4 class="description2">{{albumDescription}}</h4>
         {{/each}}
 
-        <h4>Artist Genre: {{artist.artistGenre}}</h4>
-        <a href={{artist.artistLink}} class="artistLink">Band's Website or Info</a>
+        <h4 class="h4">Artist Genre: {{artist.artistGenre}}</h4>
+        <a href={{artist.artistLink}} class="link">Band's Website or Info</a>
 
         <div class="artistButtons">
             <a href="/album/new"><button>Add an album</button></a>
 
             <a href="/artist/{{artist._id}}/edit"><button>Edit artist info.</button></a>
 
-            <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="artistDelete">
+            <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="delete">
                 <button type="submit">Delete this artist</button>
             </form>
         </div>
