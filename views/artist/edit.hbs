@@ -5,19 +5,15 @@
 		<h1>Edit<br>the<br>artist</h1>
 
 		<form action="/artist/{{artist._id}}?_method=PATCH" method="POST">
-			<p class="input-field">Edit artist name:
+			<p class="input-field">Edit artist name:</p>
 				<input type="text" name="artistName" value="{{artist.artistName}}">
-			</p>
-			<p class="input-field">Edit artist description:
+			<p class="input-field">Edit artist description:</p>
 				<input type="text" name="artistDescription" value="{{artist.artistDescription}}">
-			</p>
-			<p class="input-field">Edit the genre:
+			<p class="input-field">Edit the genre:</p>
 				<input type="text" name="artistGenre" value="{{artist.artistGenre}}">
-			</p>
-			<p class="input-field">Edit link:
+			<p class="input-field">Edit link:</p>
 				<input type="text" name="artistLink" value="{{artist.artistLink}}">
-			</p>
-			<button type="submit">Save your edits</button>
+			<button type="submit" class="submitButton">Save your edits</button>
 		</form>
 
 		<a href="/">Return to Home Page</a>
