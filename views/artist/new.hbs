@@ -1,24 +1,26 @@
 <main>
 
-    <div class="screen">
+    <div class="form">
 
-            <form action="/artist/new" method="POST" class="createArtist">
-                <p class="input-field">New artist name:
-                    <input type="text" name="artistName" placeholder="Artist name">
-                </p>
-                <p class="input-field">Artist description:
-                    <input type="text" name="artistDescription" placeholder="Artist description">
-                </p>
-                <p class="input-field">The genre:
-                    <input type="text" name="artistGenre" placeholder="Artist Genre">
-                </p>
-                <p class="input-field">Link to artist info. or website:
-                    <input type="text" name="artistLink" placeholder="Link to website">
-                </p>
-                <button type="submit">Create new artist</button>
-            </form>
+        <h1>Create new artist</h1>
 
-            <a href="/">Return to Home Page</a>
+        <form action="/artist/new" method="POST" class="createArtist">
+            <p class="input-field">New artist name:
+                <input type="text" name="artistName" placeholder="Artist name">
+            </p>
+            <p class="input-field">Artist description:
+                <input type="text" name="artistDescription" placeholder="Artist description">
+            </p>
+            {{!-- <p class="input-field">The genre:
+                <input type="text" name="artistGenre" placeholder="Artist Genre">
+            </p> --}}
+            <p class="input-field">Link to artist info. or website:
+                <input type="text" name="artistLink" placeholder="Link to website">
+            </p>
+            <button type="submit">Create new artist</button>
+        </form>
 
-        </div>
+        <a href="/">Return to Home Page</a>
+
+    </div>
 </main>

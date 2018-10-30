@@ -47,7 +47,7 @@ footer {
   grid-row: span 2;
   width: 53%;
   height: 80%;
-  margin: -10px auto 0 auto;
+  margin: -34px auto 0 auto;
   color: white;
 }
 
@@ -74,6 +74,7 @@ p {
 }
 
 .instructions {
+  display: block;
   margin: 0 50px 0 auto;
   float: right;
 }
@@ -111,12 +112,24 @@ a {
   display: block;
   margin: 5px auto 5px auto;
 }
-/* EDIT */
-form {
-  display: inline-block;
-  width: 50%;
-}
-.input-field {
-  display: inline;
+/* FORMS */
+.form {
+  background-color: rgba(0,0,0,.7);
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 400px;
+}
