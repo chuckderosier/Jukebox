@@ -22,20 +22,18 @@ const songController = {
     },
     create: (req, res) => {
         Song.create(req.body).then((savedSong) => {
-            savedSong.save()
+            res.redirect(`/album/${savedSong._id}`)
         })
-        res.redirect(`/album/${savedSong._id}`)
     },
     edit: (req, res) => {
         Song.findById(req.params.id).then(song => {
-            res.render('song/show', {
+            res.render('song/edit', {
                 song: song
             })
         })
     },
     update: (req, res) => {
         Song.findByIdAndUpdate(req.params.id, req.body).then((updatedSong) => {
-            updateSong.save()
             res.redirect(`/song/${updatedSong._id}`)
         })
     },

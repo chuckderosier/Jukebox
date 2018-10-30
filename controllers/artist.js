@@ -4,7 +4,7 @@ const artistController = {
     index: (req, res) => {
         Artist.find().populate('artist')
             .then(artist => {
-                res.render('/', {
+                res.render('index', {
                     artist: artist
                 })
             })
@@ -22,11 +22,8 @@ const artistController = {
     },
     create: (req, res) => {
         Artist.create(req.body).then((savedArtist) => {
-            savedArtist.save()
+            res.redirect('index')
         })
-            .then(() => {
-                res.redirect('/')
-            })
     },
     edit: (req, res) => {
         Artist.findById(req.params.id).then(artist => {
@@ -42,7 +39,7 @@ const artistController = {
     },
     delete: (req, res) => {
         Artist.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('/')
+            res.redirect('index')
         })
     }
 }

@@ -22,10 +22,7 @@ const albumController = {
     },
     create: (req, res) => {
         Album.create(req.body).then((savedAlbum) => {
-            savedAlbum.save()
-        })
-        .then(() => {
-            res.redirect(`/album/${savedAlbum._id}`)
+            res.redirect(`/album/${savedAlbum._id}`)  
         })
     },
     edit: (req, res) => {
@@ -37,7 +34,6 @@ const albumController = {
     },
     update: (req, res) => {
         Album.findByIdAndUpdate(req.params.id, req.body).then((updatedAlbum) => {
-            updatedAlbum.save()
             res.redirect(`/album/${updatedAlbum._id}`)
         })
     },
