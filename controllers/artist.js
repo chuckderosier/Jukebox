@@ -23,9 +23,10 @@ const artistController = {
     },
     create: (req, res) => {
         Artist.create(req.body).then((savedArtist) => {
-            res.send(savedArtist)
+            console.log("HERE")
+            savedArtist.save()
+            res.redirect('/')
         })
-        res.redirect('/')
     },
     edit: (req, res) => {
         Artist.findById(req.params.id).then(artist => {
