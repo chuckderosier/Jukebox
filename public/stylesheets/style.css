@@ -24,19 +24,19 @@ main {
 }
 
 h1 {
-  margin: -1px 0 38px 2px;
+  margin: -1px auto 0 auto;
   text-align: left;
 }
 
 .screen {
-  margin: 60px auto 0 auto;
+  margin: 98px auto 0 215px;
   grid-row: span 2;
   background-color: rgba(255,255,255,.2);
   padding: 10px;
-  width: 780px;
-  height: 360px;
-  border-top-left-radius: 360px;
-  border-top-right-radius: 360px;
+  width: 800px;
+  height: 364px;
+  border-top-left-radius: 364px;
+  border-top-right-radius: 364px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -45,8 +45,8 @@ h1 {
 footer {
   grid-area: footer;
   grid-row: span 2;
-  width: 620px;
-  height: 85px;
+  width: 670px;
+  height: 90px;
   margin: -30px auto 0 auto;
   color: white;
 }
@@ -133,3 +133,153 @@ form {
 .submitButton {
   margin: 10px auto;
 }
+
+@media only screen  and (max-width : 1224px) {
+  body {
+    padding: 7px;
+    margin: 3px auto;
+    background-size: 75%;
+  }
+  main {
+    height: 82%;
+  }
+  h1 {
+    margin: -1px auto 0 auto;
+  }
+  .screen {
+    margin: 74px auto 0 161px;
+    padding: 7px;
+    width: 600px;
+    height: 273px;
+    border-top-left-radius: 273px;
+    border-top-right-radius: 273px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  footer {
+    width: 502px;
+    height: 50px;
+    margin: -22px auto 0 auto;
+  }
+  nav {
+    margin: 11px auto;
+  }
+  h5 {
+    margin: 0 auto -7px auto;
+  }
+  .genres {
+    margin: -15px auto;
+  }
+  
+  p {
+    width: 22%;
+    font-size: 8px;
+  }
+  .instructions {
+    margin: 0 37px 0 auto;
+  }
+  
+  .newButton {
+    margin: 0 auto 0 60px;
+  }
+  }
+
+@media only screen and (max-width : 768px) {
+  body {
+    padding: 5px;
+    margin: 2px auto;
+    background-size: 50%;
+  }
+  main {
+    height: 82%;
+  }
+  h1 {
+    margin: -1px auto 0 auto;
+  }
+  .screen {
+    margin: 48px auto 0 107px;
+    padding: 5px;
+    width: 400px;
+    height: 182px;
+    border-top-left-radius: 182px;
+    border-top-right-radius: 182px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  /* control panet */
+  footer {
+    width: 385px;
+    height: 45px;
+    margin: -15px auto 0 auto;
+  }
+  nav {
+    margin: 7px auto;
+  }
+  h5 {
+    margin: 0 auto -5px auto;
+  }
+  .genres {
+    margin: -10px auto;
+  }
+  p {
+    width: 15%;
+    font-size: 6px;
+  }
+  .instructions {
+    margin: 0 25px 0 auto;
+    float: right;
+  }
+  .newButton {
+    margin: 0 auto 0 40px;
+  }
+  }
+
+  @media only screen and (max-width : 321px) {
+    body {
+      padding: 2px;
+      margin: 1px auto;
+      background-size: 50%;
+    }
+    main {
+      height: 82%;
+    }
+    h1 {
+      margin: -1px auto 0 auto;
+    }
+    .screen {
+      margin: 24px auto 0 107px;
+      padding: 2px;
+      width: 200px;
+      height: 91px;
+      border-top-left-radius: 91px;
+      border-top-right-radius: 91px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    /* control panet */
+    footer {
+      width: 192px;
+      height: 22px;
+      margin: -7px auto 0 auto;
+    }
+    nav {
+      margin: 3px auto;
+    }
+    h5 {
+      margin: 0 auto -2px auto;
+    }
+    .genres {
+      margin: -5px auto;
+    }
+    p {
+      width: 7%;
+      font-size: 3px;
+    }
+    .instructions {
+      margin: 0 12px 0 auto;
+      float: right;
+    }
+    .newButton {
+      margin: 0 auto 0 20px;
+    }
+    }
