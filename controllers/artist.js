@@ -4,29 +4,29 @@ const artistController = {
     index: (req, res) => {
         Artist.find().populate('artist')
             .then(artist => {
-                console.log(artist)
-                res.render('index', {
+                res.render('/', {
                     artist: artist
                 })
             })
     },
     new: (req, res) => {
-        res.render('artist/add')
+        res.render('artist/new')
     },
     show: (req, res) => {
-        Artist.findById(req.params.id).populate('artistAlbum').then((artistFromDb) => {
+        Artist.findById(req.params.id).populate('artistAlbum').then((artist) => {
             res.render(
                 'artist/show',
-                { artist: artistFromDb }
+                { artist: artist }
             )
         })
     },
     create: (req, res) => {
         Artist.create(req.body).then((savedArtist) => {
-            console.log("HERE")
             savedArtist.save()
-            res.redirect('/')
         })
+            .then(() => {
+                res.redirect('/')
+            })
     },
     edit: (req, res) => {
         Artist.findById(req.params.id).then(artist => {
@@ -37,7 +37,6 @@ const artistController = {
     },
     update: (req, res) => {
         Artist.findByIdAndUpdate(req.params.id, req.body).then((updatedArtist) => {
-            updatedArtist.save()
             res.redirect(`/artist/${updatedArtist._id}`)
         })
     },

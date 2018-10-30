@@ -4,17 +4,16 @@ const songController = {
     index: (req, res) => {
         Song.find().populate('song')
             .then(song => {
-                res.render('/', {
+                res.render('song/show', {
                     song: song
                 })
             })
     },
     new: (req, res) => {
-        res.render('song/add')
+        res.render('song/new')
     },
     show: (req, res) => {
         Song.findById(req.params.id).populate('albumSong').then((song) => {
-            console.log(song)
             res.render(
                 'song/show',
                 { song: song }
@@ -23,9 +22,9 @@ const songController = {
     },
     create: (req, res) => {
         Song.create(req.body).then((savedSong) => {
-            res.send(savedSong)
+            savedSong.save()
         })
-        res.redirect('/')
+        res.redirect(`/album/${savedSong._id}`)
     },
     edit: (req, res) => {
         Song.findById(req.params.id).then(song => {
@@ -42,7 +41,7 @@ const songController = {
     },
     delete: (req, res) => {
         Song.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('/')
+            res.redirect(`/album/${album._id}`)
         })
     }
 }

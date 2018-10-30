@@ -10,7 +10,7 @@ const albumController = {
             })
     },
     new: (req, res) => {
-        res.render('album/add')
+        res.render('album/new')
     },
     show: (req, res) => {
         Album.findById(req.params.id).populate('albumSong').then((album) => {
@@ -22,13 +22,14 @@ const albumController = {
     },
     create: (req, res) => {
         Album.create(req.body).then((savedAlbum) => {
-            res.send(savedAlbum)
+            savedAlbum.save()
         })
-        res.redirect('/')
+        .then(() => {
+            res.redirect(`/album/${savedAlbum._id}`)
+        })
     },
     edit: (req, res) => {
         Album.findById(req.params.id).then(album => {
-            console.log("ALBUM",album)
             res.render('album/edit', {
                 album: album
             })
@@ -42,7 +43,7 @@ const albumController = {
     },
     delete: (req, res) => {
         Album.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('/')
+            res.redirect(`/artist/${artist._id}`)
         })
     }
 }
