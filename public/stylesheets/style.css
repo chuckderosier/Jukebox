@@ -3,8 +3,8 @@ body {
   margin: 5px auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgba(100,100,100,1);
-  min-width: 980px;
-  max-height: 600px;
+  height: 100vh;
+  width: 100vw;
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -29,16 +29,61 @@ h1 {
 }
 
 .screen {
+  margin: 90px auto -50px auto;
   grid-row: span 2;
   background-color: rgba(255,255,255,.2);
-  margin: 0 auto;
   padding: 10px;
-  width: 62%;
-  height: 69%;
+  width: 58vw;
+  height: 47vh;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
+}
+
+/* control panet */
+footer {
+  grid-area: footer;
+  grid-row: span 2;
+  width: 53%;
+  height: 80%;
+  margin: -10px auto 0 auto;
+  color: white;
+}
+
+nav {
+  grid-area: nav;
+  margin: 15px auto;
+  float: left;
+}
+
+h5 {
+  margin: 0 auto -10px auto;
+}
+
+.genres {
+  display: inline-block;
+  margin: -20px auto;
+}
+
+p {
+  grid-area: p;
+  width: 30%;
+  font-size: 12px;
+  float: right;
+}
+
+.instructions {
+  margin: 0 50px 0 auto;
+  float: right;
+}
+
+.newButton {
+  margin: 0 auto 0 80px;
+}
+
+a {
+  color: yellow;
 }
 /* SHOW */
 .name {
@@ -74,36 +119,4 @@ form {
 .input-field {
   display: inline;
 }
-/* control panet */
-footer {
-  grid-area: footer;
-  grid-row: span 2;
-  margin: 0 auto;
-  color: white;
-}
 
-nav {
-  grid-area: nav;
-  margin: 15px auto;
-  float: left;
-}
-
-h5 {
-  margin: 0 auto -10px auto;
-}
-
-.genres {
-  display: inline-block;
-  margin: -20px 0;
-}
-
-p {
-  grid-area: p;
-  width: 30%;
-  font-size: 12px;
-  float: right;
-}
-
-a {
-  color: yellow;
-}
