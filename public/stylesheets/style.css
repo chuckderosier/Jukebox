@@ -29,6 +29,8 @@ h1 {
 }
 
 .screen {
+  font-family: 'Audiowide', cursive;
+  font-size: 18px;
   margin: 7.5% auto 0 215px;
   grid-row: span 2;
   padding: 10px;
@@ -42,6 +44,7 @@ h1 {
 
 a {
   color: yellow;
+  text-decoration: none;
 }
 
 /* control panet */
@@ -59,8 +62,9 @@ footer {
 }
 
 .p {
+  margin: -8px 0 0 0;
   width: 30%;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .instructions {
@@ -116,6 +120,7 @@ h5 {
 /* FORMS */
 
 .form {
+  font-family: 'Patua One', cursive;
   margin: -15px auto 25px auto;
   background-color: rgba(0,0,0,.7);
   background-image: url('/images/record.png');

@@ -1,4 +1,5 @@
 const Album = require('../models/Album')
+const Artist = require('../models/Artist')
 
 const albumController = {
     index: (req, res) => {
@@ -21,8 +22,14 @@ const albumController = {
         })
     },
     create: (req, res) => {
-        Album.create(req.body).then((savedAlbum) => {
-            res.redirect(`/album/${savedAlbum._id}`)  
+        Artist.findById(req.params.artistId). then ((artistAlbum) => {
+            Album.create(req.body).then((artistAlbum) => {
+                artistAlbum.push(artistAlbum)
+                artistAlbum.save()
+                artist.save()
+            }).then (() => {
+                res.redirect(`/album/${savedAlbum._id}`) 
+            })
         })
     },
     edit: (req, res) => {
