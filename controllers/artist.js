@@ -14,6 +14,7 @@ const artistController = {
     },
     show: (req, res) => {
         Artist.findById(req.params.id).populate('artistAlbum').then((artist) => {
+            console.log(artist)
             res.render(
                 'artist/show',
                 { artist: artist }
@@ -21,8 +22,8 @@ const artistController = {
         })
     },
     create: (req, res) => {
-        Artist.create(req.body).then((savedArtist) => {
-            res.redirect('index')
+        Artist.create(req.body).then(() => {
+            res.redirect('/')
         })
     },
     edit: (req, res) => {
@@ -39,7 +40,7 @@ const artistController = {
     },
     delete: (req, res) => {
         Artist.findByIdAndRemove(req.params.id).then(() => {
-            res.redirect('index')
+            res.redirect('/')
         })
     }
 }

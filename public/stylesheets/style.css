@@ -48,27 +48,33 @@ a {
 footer {
   grid-area: footer;
   grid-row: span 2;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
   width: 670px;
   height: 90px;
-  margin: -2% auto 0 auto;
+  margin: -1% auto 0 22%;
   color: white;
 }
 
 p {
   width: 30%;
   font-size: 12px;
-  float: right;
 }
 
 .instructions {
-  float: right;
-  margin: 0 8% 0 auto;
-  background-color: rgb(240,0,100)
+  font-size: 24px;
+  height: 40px;
+  background-color: rgb(240,0,100);
+  border-radius: 10px;
 }
 
 .newButton {
-  float: left;
-  margin: 0 auto 0 10%;
+  font-size: 24px;
+  height: 40px;
+  background-color: rgb(50,100,200);
+  border-radius: 10px;
 }
 
 /* SHOW */
@@ -112,6 +118,10 @@ h5 {
 .form {
   margin: -15px auto 25px auto;
   background-color: rgba(0,0,0,.7);
+  background-image: url('/images/record.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -123,8 +133,6 @@ h5 {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .submitButton {
