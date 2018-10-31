@@ -29,9 +29,8 @@ h1 {
 }
 
 .screen {
-  margin: 98px auto 0 215px;
+  margin: 7.5% auto 0 215px;
   grid-row: span 2;
-  background-color: rgba(255,255,255,.2);
   padding: 10px;
   width: 800px;
   height: 364px;
@@ -47,7 +46,7 @@ footer {
   grid-row: span 2;
   width: 670px;
   height: 90px;
-  margin: -30px auto 0 auto;
+  margin: -26px auto 0 auto;
   color: white;
 }
 
@@ -114,6 +113,7 @@ a {
 }
 /* FORMS */
 .form {
+  margin: -15px auto 25px auto;
   background-color: rgba(0,0,0,.7);
   height: 100vh;
   width: 100vw;
@@ -131,7 +131,46 @@ form {
 }
 
 .submitButton {
-  margin: 10px auto;
+  margin: 15px auto;
+  position: relative;
+  background-color: rgba(200,0,100,1);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.submitButton:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.submitButton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.footerForm {
+  background-color: rgba(0,0,0,.7);
+  height: 20vh;
+  width: 100vw;
 }
 
 @media only screen  and (max-width : 1224px) {
@@ -141,7 +180,7 @@ form {
     background-size: 75%;
   }
   main {
-    height: 82%;
+    height: 61%;
   }
   h1 {
     margin: -1px auto 0 auto;
@@ -159,7 +198,7 @@ form {
   footer {
     width: 502px;
     height: 50px;
-    margin: -22px auto 0 auto;
+    margin: -29px auto 0 auto;
   }
   nav {
     margin: 11px auto;
@@ -191,7 +230,7 @@ form {
     background-size: 50%;
   }
   main {
-    height: 82%;
+    height: 41%;
   }
   h1 {
     margin: -1px auto 0 auto;
@@ -210,7 +249,7 @@ form {
   footer {
     width: 385px;
     height: 45px;
-    margin: -15px auto 0 auto;
+    margin: -13px auto 0 auto;
   }
   nav {
     margin: 7px auto;
@@ -241,7 +280,7 @@ form {
       background-size: 50%;
     }
     main {
-      height: 82%;
+      height: 20%;
     }
     h1 {
       margin: -1px auto 0 auto;
@@ -260,7 +299,7 @@ form {
     footer {
       width: 192px;
       height: 22px;
-      margin: -7px auto 0 auto;
+      margin: -6px auto 0 auto;
     }
     nav {
       margin: 3px auto;
