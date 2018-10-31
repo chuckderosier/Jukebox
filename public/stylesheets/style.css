@@ -40,78 +40,75 @@ h1 {
   border-bottom-right-radius: 10px;
 }
 
+a {
+  color: yellow;
+}
+
 /* control panet */
 footer {
   grid-area: footer;
   grid-row: span 2;
   width: 670px;
   height: 90px;
-  margin: -26px auto 0 auto;
+  margin: -2% auto 0 auto;
   color: white;
 }
 
-nav {
-  grid-area: nav;
-  margin: 15px auto;
-  float: left;
-}
-
-h5 {
-  margin: 0 auto -10px auto;
-}
-
-.genres {
-  display: inline-block;
-  margin: -20px auto;
-}
-
 p {
-  grid-area: p;
   width: 30%;
   font-size: 12px;
   float: right;
 }
 
 .instructions {
-  display: block;
-  margin: 0 50px 0 auto;
   float: right;
+  margin: 0 8% 0 auto;
+  background-color: rgb(240,0,100)
 }
 
 .newButton {
-  margin: 0 auto 0 80px;
+  float: left;
+  margin: 0 auto 0 10%;
 }
 
-a {
-  color: yellow;
-}
 /* SHOW */
+h5 {
+  margin: 0 auto -10px auto;
+}
+
 .name {
   color: rgba(255,0,240,1);
   margin: 0 auto 20px auto;
 }
+
 .description1 {
   margin: -20px auto 0 auto;
   width: 50%;
   font-size: 12px;
 }
+
 .h4 {
   margin: 10px auto 0 auto;
 }
+
 .description2 {
   margin: 0 auto 5px auto;
   width: 80%;
   font-size: 12px;
 }
+
 .link {
   display: block;
   margin: 5px auto 5px auto;
 }
+
 .delete {
   display: block;
   margin: 5px auto 5px auto;
 }
+
 /* FORMS */
+
 .form {
   margin: -15px auto 25px auto;
   background-color: rgba(0,0,0,.7);
