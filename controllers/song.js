@@ -1,4 +1,5 @@
 const Song = require('../models/Song')
+const Album = require('../models/Album')
 
 const songController = {
     index: (req, res) => {
@@ -21,9 +22,12 @@ const songController = {
         })
     },
     create: (req, res) => {
-        Song.create(req.body).then((savedSong) => {
-            album.song.push(savedSong)
-            res.redirect(`/song/${savedSong._id}`)
+        Album.findById(req.params.albumId).then((album) => {
+            Song.create(req.body).then((savedSong) => {
+                album.song.push(savedSong)
+            }).then(() => {
+                res.redirect(`/song/${savedSong._id}`)
+            })
         })
     },
     edit: (req, res) => {

@@ -22,13 +22,12 @@ const albumController = {
         })
     },
     create: (req, res) => {
-        Artist.findById(req.params.artistId). then ((artistAlbum) => {
-            Album.create(req.body).then((artistAlbum) => {
-                artistAlbum.push(artistAlbum)
-                artistAlbum.save()
+        Artist.findById(req.params.artistId).then((artist) => {
+            Album.create(req.body).then((newAlbum) => {
+                artist.artistAlbum.push(newAlbum)
                 artist.save()
-            }).then (() => {
-                res.redirect(`/album/${savedAlbum._id}`) 
+            }).then(() => {
+                res.redirect(`/album/${savedAlbum._id}`)
             })
         })
     },
