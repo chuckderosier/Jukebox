@@ -13,7 +13,7 @@ When a user clicks on a song in the album it will show a description of the song
 Link to Trello: https://trello.com/b/RKTbzUID/jukebox
 Link to Figma: https://www.figma.com/file/YK3YRu2fr5fgj0NTc6VRwUn5/Untitled?node-id=1%3A2
 Link to LucidChart: https://www.lucidchart.com/documents/edit/9cbf8ae9-0f0c-40f8-8e1f-b443682a396c/0
-Link to Heroku: https://dashboard.heroku.com/apps/chucks-jukebox
+Link to Heroku: https://chucks-jukebox.herokuapp.com/
 
 Tech used: HTML, CSS, Javascript, Node.js, Express, MongoDB, mongoose, handlebars
 
