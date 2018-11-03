@@ -30,8 +30,8 @@ h1 {
 
 .screen {
   font-family: 'Audiowide', cursive;
+  margin: 60px auto 0 auto;
   font-size: 18px;
-  margin: 7.5% auto 0 215px;
   grid-row: span 2;
   padding: 10px;
   width: 800px;
@@ -42,7 +42,7 @@ h1 {
   border-bottom-right-radius: 10px;
 }
 
-.duck {
+.artistDisplay {
   text-decoration: none;
 }
 
@@ -60,26 +60,26 @@ footer {
   justify-content: space-evenly;
   width: 670px;
   height: 90px;
-  margin: -1% auto 0 22%;
+  margin: 20px auto 0 22%;
   color: white;
 }
 
 .p {
   margin: -8px 0 0 0;
   width: 30%;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .instructions {
-  font-size: 24px;
-  height: 40px;
+  font-size: 18px;
+  height: 30px;
   background-color: rgb(240,0,100);
   border-radius: 10px;
 }
 
 .newButton {
-  font-size: 24px;
-  height: 40px;
+  font-size: 18px;
+  height: 30px;
   background-color: rgb(50,100,200);
   border-radius: 10px;
 }

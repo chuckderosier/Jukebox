@@ -14,7 +14,6 @@ const artistController = {
     },
     show: (req, res) => {
         Artist.findById(req.params.id).populate('artistAlbum').then((artist) => {
-            console.log(artist)
             res.render(
                 'artist/show',
                 { artist: artist }

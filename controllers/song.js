@@ -22,9 +22,10 @@ const songController = {
         })
     },
     create: (req, res) => {
-        Album.findById(req.params.albumId).then((album) => {
+        Album.findById(req.params.id).then((album) => {
             Song.create(req.body).then((savedSong) => {
-                album.song.push(savedSong)
+                album.albumSong.push(savedSong)
+                Album.save()
             }).then(() => {
                 res.redirect(`/song/${savedSong._id}`)
             })
