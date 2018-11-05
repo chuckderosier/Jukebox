@@ -26,6 +26,7 @@ const songController = {
             Song.create(req.body).then((savedSong) => {
                 album.albumSong.push(savedSong)
                 Album.save()
+                Song.save()
             }).then(() => {
                 res.redirect(`/song/${savedSong._id}`)
             })

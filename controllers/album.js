@@ -26,6 +26,7 @@ const albumController = {
             Album.create(req.body).then((newAlbum) => {
                 artist.artistAlbum.push(newAlbum)
                 Artist.save()
+                Album.save()
             }).then(() => {
                 res.redirect(`/album/${savedAlbum._id}`)
             })
