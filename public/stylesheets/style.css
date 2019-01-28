@@ -1,10 +1,9 @@
 body {
   padding: 10px;
-  margin: 5px auto;
+  /* margin: 5px auto; */
+  width: 100vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgba(100,100,100,1);
-  height: 100vh;
-  width: 100vw;
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -17,25 +16,24 @@ body {
 }
 
 main {
-  height: 82%;
   grid-area: main;
   text-align: center;
   color: white;
 }
 
 h1 {
-  margin: -1px auto 0 auto;
+  padding: .2em auto 0 auto;
   text-align: left;
 }
 
 .screen {
   font-family: 'Audiowide', cursive;
-  margin: 60px auto 0 auto;
-  font-size: 18px;
+  margin: 0 auto;
+  font-size: 1em;
   grid-row: span 2;
   padding: 10px;
-  width: 800px;
-  height: 364px;
+  width: 40rem;
+  height: 20rem;
   border-top-left-radius: 364px;
   border-top-right-radius: 364px;
   border-bottom-left-radius: 10px;
@@ -50,7 +48,7 @@ a {
   color: yellow;
 }
 
-/* control panet */
+/* control panel */
 footer {
   grid-area: footer;
   grid-row: span 2;
@@ -190,7 +188,7 @@ form {
   width: 100vw;
 }
 
-@media only screen  and (max-width : 1224px) {
+/* @media only screen  and (max-width : 1224px) {
   body {
     padding: 7px;
     margin: 3px auto;
@@ -338,4 +336,4 @@ form {
     .newButton {
       margin: 0 auto 0 20px;
     }
-    }
+    } */
