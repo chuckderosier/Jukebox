@@ -1,13 +1,11 @@
 body {
-  padding: 10px;
-  /* margin: 5px auto; */
-  width: 100vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgba(100,100,100,1);
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
   display: grid;
   grid-template-rows: 5.3fr 1fr;
   grid-template-areas:
@@ -22,8 +20,9 @@ main {
 }
 
 h1 {
-  padding: .2em auto 0 auto;
+  font-size: 1.5em;
   text-align: left;
+  margin: .2em 0 0 0;
 }
 
 .screen {
@@ -31,11 +30,10 @@ h1 {
   margin: 0 auto;
   font-size: 1em;
   grid-row: span 2;
-  padding: 10px;
-  width: 40rem;
-  height: 20rem;
-  border-top-left-radius: 364px;
-  border-top-right-radius: 364px;
+  width: 36rem;
+  height: 17rem;
+  border-top-left-radius: 18em;
+  border-top-right-radius: 18em;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
