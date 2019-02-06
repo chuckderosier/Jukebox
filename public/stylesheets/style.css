@@ -1,10 +1,14 @@
+html {
+  min-height:100%;
+}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgba(100,100,100,1);
+  background-color: rgba(100,100,100,1); 
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   display: grid;
   grid-template-rows: 5.3fr 1fr;
   grid-template-areas:
@@ -18,10 +22,10 @@ main {
   color: white;
 }
 
-h1 {
+.siteTitle {
   font-size: 1.5em;
   text-align: left;
-  margin: .2em 0 0 0;
+  margin: .6em 0 0 .4em;
 }
 
 .screen {
@@ -48,7 +52,7 @@ a {
 /* control panel */
 footer {
   grid-area: footer;
-  grid-row: span 2;
+  /* grid-row: span 2; */
   display: flex;
   flex-direction: row;
   align-content: center;
