@@ -7,6 +7,7 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  margin: 0 auto;
 }
 
 main {
@@ -22,13 +23,12 @@ main {
 
 .screen {
   font-family: 'Audiowide', cursive;
-  margin: 0 auto;
+  margin: 6em auto 0 auto;
   font-size: 1em;
-  grid-row: span 2;
-  width: 36rem;
-  height: 17rem;
-  border-top-left-radius: 18em;
-  border-top-right-radius: 18em;
+  width: 50em;
+  height: 26em;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
