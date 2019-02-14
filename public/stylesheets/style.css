@@ -1,12 +1,12 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgba(100,100,100,1); 
+  background-color: rgba(30,30,30,1); 
   background-image: url("/images/juke.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  /* width: 100vw; */
-  height: 100vh;
+  background-size: contain;
+  width: 100%;
+  height: auto;
   margin: 7em auto;
 }
 
@@ -23,10 +23,10 @@ main {
 
 .screen {
   font-family: 'Audiowide', cursive;
-  margin: 1em auto 0 auto;
+  margin: .6em auto 3em auto;
   font-size: 1em;
   width: 50em;
-  height: 26em;
+  height: 25.2em;
   border-top-left-radius: 25%;
   border-top-right-radius: 25%;
   border-bottom-left-radius: 10px;
@@ -49,7 +49,7 @@ a {
   justify-content: space-evenly;
   width: 670px;
   height: 90px;
-  margin: 20px auto 0 22%;
+  margin: 0 auto;
   color: white;
 }
 
