@@ -127,25 +127,36 @@ h5 {
 }
 
 .formTitle {
-  margin: 30px auto 0 auto;
+  font-size: 3em;
+  color: rgb(200,200,100);
+  margin: .4em auto 0 auto;
 }
 
 form {
-  margin: 20px auto 0 auto;
+  font-size: 1.6em;
+  color: rgb(200,200,100);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+p {
+  margin: .2em;
+}
+input {
+  font-size: .7em;
+  padding: .1em;
+}
 
 .submitButton {
-  margin: 15px auto;
+  margin: 1.2em auto .8em auto;
   position: relative;
   background-color: rgba(200,0,100,1);
   border: none;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 2em;
+  font-size: .8em;
   color: black;
-  padding: 10px;
-  width: 200px;
+  padding: .3em;
+  width: 10em;
   text-align: center;
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
