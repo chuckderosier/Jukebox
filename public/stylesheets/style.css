@@ -7,20 +7,17 @@ body {
   background-size: contain;
   height: 100vh;
 }
-
 main {
   text-align: center;
   color: white;
   display: flex;
   flex-direction: column;
 }
-
 .siteTitle {
   font-size: 1.6em;
   text-align: left;
   margin: 1.5em 0 0 1.5em;
 }
-
 .screen {
   font-family: 'Audiowide', cursive;
   margin: 5.2em auto 3em auto;
@@ -32,11 +29,9 @@ main {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .artistDisplay {
   text-decoration: none;
 }
-
 a {
   color: yellow;
 }
@@ -52,20 +47,17 @@ a {
   margin: 0 auto;
   color: white;
 }
-
 .p {
   margin: -8px 0 0 0;
   width: 30%;
   font-size: 12px;
 }
-
 .instructions {
   font-size: 18px;
   height: 30px;
   background-color: rgb(240,0,100);
   border-radius: 10px;
 }
-
 .newButton {
   font-size: 18px;
   height: 30px;
@@ -74,43 +66,50 @@ a {
 }
 
 /* SHOW */
-h5 {
-  margin: 0 auto -10px auto;
+.show {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
-
+.show-screen {
+  margin: 3.2em auto 3em auto;
+  text-align: center;
+  width: 50em;
+  height: 25.2em;
+}
 .name {
   color: rgba(255,0,240,1);
-  margin: 0 auto 20px auto;
+  margin: 0 auto .2em auto;
 }
-
 .description1 {
-  margin: -20px auto 0 auto;
+  margin: .5em auto;
   width: 50%;
   font-size: 12px;
 }
-
 .h4 {
-  margin: 10px auto 0 auto;
+  margin: .2em auto;
 }
-
 .description2 {
   margin: 0 auto 5px auto;
   width: 80%;
   font-size: 12px;
 }
-
+.click {
+  margin: .4em auto 1.2em auto;
+}
+.album {
+  margin: 0 auto 1.2em auto;
+}
 .link {
   display: block;
-  margin: 5px auto 5px auto;
+  /* margin: 5px auto 5px auto; */
 }
-
 .delete {
   display: block;
-  margin: 5px auto 5px auto;
+  /* margin: 5px auto 5px auto; */
 }
 
 /* FORMS */
-
 .form {
   font-family: 'Patua One', cursive;
   margin: -15px auto 25px auto;
@@ -125,13 +124,11 @@ h5 {
   flex-direction: column;
   align-items: center;
 }
-
 .formTitle {
   font-size: 3em;
   color: rgb(200,200,100);
   margin: .4em auto 0 auto;
 }
-
 form {
   font-size: 1.6em;
   color: rgb(200,200,100);
@@ -146,7 +143,6 @@ input {
   font-size: .7em;
   padding: .1em;
 }
-
 .submitButton {
   margin: 1.2em auto .8em auto;
   position: relative;
@@ -183,7 +179,6 @@ input {
   opacity: 1;
   transition: 0s
 }
-
 .footerForm {
   background-color: rgba(0,0,0,.7);
   height: 20vh;
