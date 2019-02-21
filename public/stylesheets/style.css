@@ -100,9 +100,8 @@ a {
 .album {
   margin: 0 auto 1.2em auto;
 }
-.link {
-  display: block;
-  /* margin: 5px auto 5px auto; */
+.artistButtons {
+  margin: 14em auto 0 auto;
 }
 .delete {
   display: block;
