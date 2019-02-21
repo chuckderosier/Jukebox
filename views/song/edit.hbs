@@ -1,9 +1,6 @@
 <main>
-
 	<div class="form">
-
 		<h1 class="formTitle">Edit<br>the<br>song</h1>
-
 		<form action="/{{song._id}}?_method=PATCH" method="POST">
 			<p class="input-field">Edit song name:</p>
 				<input type="text" name="songName" value="{{song.songName}}">
@@ -15,8 +12,6 @@
 				<input type="text" name="songLink" value="{{song.songLink}}">
 			<button type="submit" class="submitButton">Save your edits</button>
 		</form>
-
 		<a href="/">Return to Home Page</a>
-
 	</div>
 </main>

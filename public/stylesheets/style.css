@@ -102,16 +102,20 @@ a {
 }
 .artistButtons {
   margin: 14em auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+a {
+  margin: .4em;
 }
 .delete {
-  display: block;
-  /* margin: 5px auto 5px auto; */
+  margin: .2em;
 }
 
 /* FORMS */
 .form {
   font-family: 'Patua One', cursive;
-  margin: -15px auto 25px auto;
+  margin: -.5em auto 0 auto;
   background-color: rgba(0,0,0,.7);
   background-image: url('/images/record.png');
   background-position: center;
