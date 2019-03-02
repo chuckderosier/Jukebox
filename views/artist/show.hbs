@@ -9,21 +9,25 @@
             <h4 class="description1">{{artist.artistDescription}}</h4>
             <a href={{artist.artistLink}} class="link">Band's Website or Info</a>
             <h4 class="click">Click on album to see songs:</h4>
-            <div class="album">
+            <div class="list-item">
                 {{#each artist.artistAlbum}}
                 <a href="/album/{{id}}">{{albumName}}</a>
                 <h4 class="description1">{{albumDescription}}</h4>
                 <h4 class="h4">Year of release {{albumYear}}</h4>
                 {{/each}}
             </div>
-            <div class="artistButtons">
+        </div>
+        <div class="show-panel">
+            <div class="show-buttons">
                 <a href="/album/new"><button>Add an album</button></a>
                 <a href="/artist/{{artist._id}}/edit"><button>Edit artist info.</button></a>
                 <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="delete">
                     <button type="submit" class="delete">Delete this artist</button>
                 </form>
             </div>
-            <a href="/">Return to Home Page</a>
+            <div class="home-page-link">
+                <a href="/">Return to Home Page</a>
+            </div>
         </div>
     </div>
 </main>

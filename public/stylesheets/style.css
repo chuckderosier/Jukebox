@@ -97,13 +97,20 @@ a {
 .click {
   margin: .4em auto 1.2em auto;
 }
-.album {
+.list-item {
   margin: 0 auto 1.2em auto;
 }
-.artistButtons {
-  margin: 14em auto 0 auto;
+.show-panel {
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+.show-buttons {
+  display: flex;
+}
+.home-page-link {
+  text-align: center;
 }
 a {
   margin: .4em;
