@@ -22,6 +22,7 @@ const albumController = {
         })
     },
     create: (req, res) => {
+        console.log('1')
         Artist.findById(req.params.id).then((artist) => {
             Album.create(req.body).then((newAlbum) => {
                 artist.artistAlbum.push(newAlbum)
