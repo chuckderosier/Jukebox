@@ -19,7 +19,7 @@
         </div>
         <div class="show-panel">
             <div class="show-buttons">
-                <a href="/album/new"><button>Add an album</button></a>
+                <a href="/artist/{{artist._id}}/album/new"><button>Add an album</button></a>
                 <a href="/artist/{{artist._id}}/edit"><button>Edit artist info.</button></a>
                 <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="delete">
                     <button type="submit" class="delete">Delete this artist</button>
