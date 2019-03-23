@@ -10,7 +10,7 @@
             <h4 class="h4">Click on song to see more info: </h4>
             <div class="list-item">
                 {{#each album.albumSong}}
-                <a href="/song/{{id}}">{{songName}}</a>
+                <a href="/artist/{{id}}/album/{{id}}/song/{{id}}">{{songName}}</a>
                 <h4 class="description1">{{songDescription}}</h4>
                 {{/each}}
             </div>

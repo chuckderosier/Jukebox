@@ -11,7 +11,7 @@
             <h4 class="click">Click on album to see songs:</h4>
             <div class="list-item">
                 {{#each artist.artistAlbum}}
-                <a href="/album/{{id}}">{{albumName}}</a>
+                <a href="/artist/{{id}}/album/{{id}}">{{albumName}}</a>
                 <h4 class="description1">{{albumDescription}}</h4>
                 <h4 class="h4">Year of release {{albumYear}}</h4>
                 {{/each}}
