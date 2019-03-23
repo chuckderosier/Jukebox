@@ -11,7 +11,7 @@
         </div>
         <div class="show-panel">
             <div class="show-buttons">
-                <a href="/song/{{song.id}}/edit"><button>Edit song information</button></a>
+                <a href="/song/{{song._id}}/edit"><button>Edit song information</button></a>
                 <form action="/song/{{song._id}}?_method=DELETE" method="POST" class="delete">
                     <button type="submit">Push to delete this song</button>
                 </form>

@@ -11,7 +11,7 @@
             <h4 class="click">Click on album to see songs:</h4>
             <div class="list-item">
                 {{#each artist.artistAlbum}}
-                <a href="/artist/{{id}}/album/{{id}}">{{albumName}}</a>
+                <a href="/artist/{{_id}}/album/{{_id}}">{{albumName}}</a>
                 <h4 class="description1">{{albumDescription}}</h4>
                 <h4 class="h4">Year of release {{albumYear}}</h4>
                 {{/each}}
@@ -20,7 +20,7 @@
         <div class="show-panel">
             <div class="show-buttons">
                 <a href="/artist/{{artist._id}}/album/new"><button>Add an album</button></a>
-                <a href="/artist/{{artist._id}}/edit"><button>Edit artist info.</button></a>
+                <a href="/artist/{{artist._id}}/edit"><button>Edit artist info</button></a>
                 <form action="/artist/{{artist._id}}?_method=DELETE" method="POST" class="delete">
                     <button type="submit" class="delete">Delete this artist</button>
                 </form>
