@@ -29,7 +29,7 @@ const albumController = {
                 Artist.save()
                 Album.save()
             }).then(() => {
-                res.redirect(`artist/${artist._id}`)
+                res.redirect(`artist/${artist.id}`)
             })
         })
     },
