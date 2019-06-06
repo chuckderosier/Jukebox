@@ -11,7 +11,7 @@ const albumController = {
             })
     },
     new: (req, res) => {
-        res.render('album/new')
+        res.render(`artist/${artist.id}/album/new`)
     },
     show: (req, res) => {
         Album.findById(req.params.id).populate('albumSong').then((album) => {
@@ -22,7 +22,6 @@ const albumController = {
         })
     },
     create: (req, res) => {
-        console.log('1111111111')
         Artist.findById(req.params.id).then((artist) => {
             Album.create(req.body).then((newAlbum) => {
                 artist.artistAlbum.push(newAlbum)
